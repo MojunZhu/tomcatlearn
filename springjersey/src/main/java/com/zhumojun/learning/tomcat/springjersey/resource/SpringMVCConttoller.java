@@ -16,8 +16,7 @@ import com.zhumojun.learning.tomcat.spring.exceptions.SpringCustmizedExceptionWi
 public class SpringMVCConttoller {
 	
 	@RequestMapping(value="/test/", method = RequestMethod.GET, produces = "application/json")
-	@ResponseBody
-	public TestUser printHello() {
+	public @ResponseBody TestUser printHello() {
 		TestUser testUser = new TestUser();
 		testUser.setAge(1);
 		testUser.setName("wer");
